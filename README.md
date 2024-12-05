@@ -36,9 +36,11 @@ This version of SISC needs to bootstrap itself.  You have two options:
 2. You can download a distribution of pre-expanded files.  You need to extract
    it under the 'src/sisc/boot' directory.  On Unix, the procedure looks like this:
 
-    wget https://github.com/downloads/amoe/sisc/sisc-psyntax-expanded.zip
-    unzip -d src/sisc/boot sisc-psyntax-expanded.zip
-    ant -Dbuild.disableExpand=true
+```
+wget https://github.com/downloads/amoe/sisc/sisc-psyntax-expanded.zip
+unzip -d src/sisc/boot sisc-psyntax-expanded.zip
+ant -Dbuild.disableExpand=true
+```
 
 (Defining `build.disableExpand` is not necessary, but avoids a spurious warning.)
 
@@ -62,8 +64,10 @@ command line XSLT processor 'xsltproc'.
 
 On Debian, you can install and symlink in the relevant jars like this:
 
-  sudo aptitude install junit libasm3-java
-  ln -st lib /usr/share/java/{junit,asm3,asm3-commons}.jar
+```
+sudo aptitude install junit libasm3-java
+ln -st lib /usr/share/java/{junit,asm3,asm3-commons}.jar
+```
 
 Download links:
 * JUnit: https://github.com/KentBeck/junit/downloads
@@ -92,8 +96,7 @@ sisc-devel@lists.sourceforge.net, with the following information:
 
 1. Build version
 2. Steps to reproduce the error
-3. A stack trace, 
-  (print-exception (get-last-exception))
+3. A stack trace, `(print-exception (get-last-exception))`
 
 If you're running the Lite build, you will not be able to perform step 3. 
 Please obtain the full build and see if your error occurs there as well,
